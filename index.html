@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bourdais &amp; Pernia — A Deliberate Way to Eat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-main">B&amp;P</span>
+        <span class="logo-sub">Bourdais &amp; Pernia</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact" class="nav-book">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-glow"></div>
+      <div class="hero-grain"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Private Dining Experience</p>
+      <h1 class="hero-title reveal">
+        A Deliberate<br /><em>Way to Eat</em>
+      </h1>
+      <div class="hero-divider"></div>
+      <div class="hero-ctas reveal" style="margin-top: 3rem;">
+        <a href="#contact" class="btn btn-gold">Book an Experience</a>
+        <a href="#about" class="btn btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll-hint">
+      <span class="scroll-bar"></span>
+      <span class="scroll-label">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ── VIDEO ── -->
+  <section id="video-section" class="video-section">
+    <div class="video-container">
+      <!-- Replace the placeholder below with your video when ready:
+           Option A (local file): <video src="your-video.mp4" autoplay muted loop playsinline></video>
+           Option B (YouTube):    <iframe src="https://www.youtube.com/embed/YOUR_ID" frameborder="0" allowfullscreen></iframe> -->
+      <div class="video-placeholder">
+        <div class="video-play-icon">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M24 20l18 10-18 10V20z" fill="currentColor"/>
+          </svg>
+        </div>
+        <p class="video-placeholder-text">Video Coming Soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS BAR ── -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat">
+        <span class="stat-n">10+</span>
+        <span class="stat-l">Events Hosted</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-n">2</span>
+        <span class="stat-l">Chefs</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-n">100%</span>
+        <span class="stat-l">Bespoke Menus</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-n">∞</span>
+        <span class="stat-l">Unforgettable Moments</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">The Minds Behind<br />the Experience</h2>
+        <p class="section-lead">Two chefs. One shared vision. An unwavering commitment to extraordinary dining.</p>
+      </div>
+
+      <div class="chefs-grid">
+        <div class="chef-card reveal">
+          <div class="chef-img-wrap">
+            <!-- Replace with Luis's photo -->
+            <div class="chef-img chef-img-placeholder">
+              <span>Chef Photo</span>
+            </div>
+            <div class="chef-img-frame"></div>
+          </div>
+          <div class="chef-info">
+            <h3 class="chef-name">Luis Roberto Pernia</h3>
+            <span class="chef-role">Co-Founder &amp; Private Dining Host</span>
+            <p class="chef-bio">I have always been the person bringing people together around food. What started as cooking for friends and family turned into something more — creating full dinner experiences where people can relax and actually enjoy their time together.</p>
+            <p class="chef-bio" style="margin-top: 0.8rem;">I focus on planning, coordination, and making sure every detail of the night runs smoothly, so you don't have to think about anything except your guests.</p>
+          </div>
+        </div>
+
+        <div class="chef-card reveal delay-1">
+          <div class="chef-img-wrap">
+            <!-- Replace with Mateo's photo -->
+            <div class="chef-img chef-img-placeholder">
+              <span>Chef Photo</span>
+            </div>
+            <div class="chef-img-frame"></div>
+          </div>
+          <div class="chef-info">
+            <h3 class="chef-name">Mateo Bourdais</h3>
+            <span class="chef-role">Co-Founder &amp; Culinary Lead</span>
+            <p class="chef-bio">I've always enjoyed cooking for others and seeing how food brings people together. Over time, that turned into creating meals that feel a little more special — the kind you don't usually make on a regular night.</p>
+            <p class="chef-bio" style="margin-top: 0.8rem;">I focus on building menus that are simple, thoughtful, and tailored to each dinner. My goal is to make food that feels elevated but still comfortable, so guests can enjoy the experience without it feeling too formal or overcomplicated.</p>
+            <p class="chef-bio" style="margin-top: 0.8rem;">For me, it's not just about the food, it's about helping create a night people actually remember.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="philosophy reveal">
+        <div class="philosophy-inner">
+          <span class="quote-open">&ldquo;</span>
+          <blockquote>We bring the restaurant experience into your home — so you can enjoy the night, not manage it.</blockquote>
+          <cite>— The B&P Team</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Culinary Services</h2>
+        <p class="section-lead">From small dinners to special occasions, we handle the food, setup, and cleanup — so you can enjoy the night with your guests.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 6v28M12 6c0 6 6 8 6 14M12 20h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M28 6v10a6 6 0 0 1-6 6v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Private Dining Events </h3>
+          <p>Exclusive dining experiences designed for intimate gatherings. We transform any space into a fine dining destination with impeccable service.</p>
+          <span class="service-tag">4 – 10 guests</span>
+        </div>
+
+        <div class="service-card reveal delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M20 7v3M20 30v3M7 20h3M30 20h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Special Occasion Dinners</h3>
+          <p>Designed for birthdays, anniversaries, and intimate celebrations. We bring a thoughtful, personalized dining experience into your home so you can enjoy the night without the stress.</p>
+          <span class="service-tag">4 – 10 + guests</span>
+        </div>
+
+        <div class="service-card reveal delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="10" width="24" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M13 18h14M13 23h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M20 6v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Custom Menu Planning</h3>
+          <p>A bespoke culinary journey tailored to your vision. We collaborate closely to craft menus that reflect your taste, story, and occasion.</p>
+          <span class="service-tag">Fully personalized</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title">Culinary Portfolio</h2>
+        <p class="section-lead">A glimpse into the experiences we create.</p>
+      </div>
+
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="dishes">Dishes</button>
+        <button class="filter-btn" data-filter="presentations">Presentations</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Replace these src URLs with your actual food photography -->
+        <div class="gallery-item reveal" data-category="dishes">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet1/800/700')"></div>
+          <div class="gallery-overlay"><span>Seared Duck Breast</span></div>
+        </div>
+        <div class="gallery-item gallery-item--tall reveal delay-1" data-category="events">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet2/600/900')"></div>
+          <div class="gallery-overlay"><span>Evening Gala, 2024</span></div>
+        </div>
+        <div class="gallery-item reveal delay-2" data-category="presentations">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet3/800/700')"></div>
+          <div class="gallery-overlay"><span>Amuse-Bouche Trio</span></div>
+        </div>
+        <div class="gallery-item gallery-item--wide reveal" data-category="events">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet4/1200/700')"></div>
+          <div class="gallery-overlay"><span>Wedding Reception, 300 Guests</span></div>
+        </div>
+        <div class="gallery-item reveal delay-1" data-category="dishes">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet5/800/700')"></div>
+          <div class="gallery-overlay"><span>Wagyu Short Rib</span></div>
+        </div>
+        <div class="gallery-item reveal delay-2" data-category="presentations">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet6/800/700')"></div>
+          <div class="gallery-overlay"><span>Dessert Tableau</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="dishes">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet7/800/700')"></div>
+          <div class="gallery-overlay"><span>Truffle Risotto</span></div>
+        </div>
+        <div class="gallery-item reveal delay-1" data-category="events">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet8/800/700')"></div>
+          <div class="gallery-overlay"><span>Corporate Dinner</span></div>
+        </div>
+        <div class="gallery-item reveal delay-2" data-category="presentations">
+          <div class="gallery-img" style="background-image: url('https://picsum.photos/seed/gourmet9/800/700')"></div>
+          <div class="gallery-overlay"><span>Tasting Course Finale</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MENU / CULINARY EXPERIENCE ── -->
+  <section id="menu" class="section section-alt">
+    <div class="container">
+      <div class="menu-split">
+        <div class="menu-text reveal">
+          <span class="section-label">Base menu</span>
+          <h2 class="section-title">Base Menu</h2>
+          <p>Our base menu is designed for effortless elegance with carefully chosen dishes that can be tailored for your event.</p>
+          <a href="#contact" class="btn btn-gold" style="margin-top: 2rem;">Book This Menu</a>
+        </div>
+
+        <div class="menu-courses reveal delay-1">
+          <div class="course-block">
+            <span class="course-label">Starters</span>
+            <ul class="course-list">
+              <li><span>Charred Asparagus</span><span class="course-detail">Brown butter, parmesan, cracked pepper</span></li>
+              <li><span>Crispy Brussels Sprouts</span><span class="course-detail">Olive oil, honey, lemon zest</span></li>
+            </ul>
+          </div>
+          <div class="course-divider"></div>
+          <div class="course-block">
+            <span class="course-label">Main</span>
+            <ul class="course-list">
+              <li><span>Pan Seared Ribeye</span><span class="course-detail">Seasonal vegetables, mushroom velouté</span></li>
+            </ul>
+          </div>
+          <div class="course-divider"></div>
+          <div class="course-block">
+            <span class="course-label">Sides</span>
+            <ul class="course-list">
+              <li><span>Parmesan Rice Pilaf</span></li>
+              <li><span>Creamy Potato Purée</span></li>
+            </ul>
+          </div>
+          <div class="course-divider"></div>
+          <div class="course-block">
+            <span class="course-label">Desserts</span>
+            <ul class="course-list">
+              <li><span>Crème Brûlée</span></li>
+            </ul>
+          </div>
+          <p class="menu-note">* This base menu is a starting point — we can customize it for your event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-text reveal">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's Create<br /><em>Something Extraordinary</em></h2>
+          <p>Ready to elevate your next event? Tell us about your vision and we'll make it happen.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span class="detail-label">Instagram</span>
+              <a href="https://www.instagram.com/bourdaisandpernia/" target="_blank" rel="noopener" class="detail-link">@borudaisandpernia</a>
+            </div>
+            <div class="contact-detail">
+              <span class="detail-label">Email</span>
+              <a href="mailto:mandpcooking@gmail.com" class="detail-link">mandpcooking@gmail.com</a>
+            </div>
+            <div class="contact-detail">
+              <span class="detail-label">Phone</span>
+              <a href="tel:+34695863004" class="detail-link">+34 695 86 30 04</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal delay-1" id="contactForm" novalidate action="mailto:mandpcooking@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="event-type">Event Type</label>
+              <select id="event-type" name="event-type">
+                <option value="" disabled selected>Select event type</option>
+                <option>Private Dinner</option>
+                <option>Birthday Celebration</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="guests">Guest Count</label>
+              <input type="number" id="guests" name="guests" placeholder="Approx. number of guests" min="1" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="event-date">Preferred Date</label>
+            <input type="date" id="event-date" name="event-date" />
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Vision *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your event, dietary needs, or anything you'd like us to know..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full">Send Inquiry</button>
+          <p class="form-note">We respond within 24 hours.</p>
+          <div class="form-success" id="formSuccess">
+            Thank you — we'll be in touch shortly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">B&amp;P</span>
+        <p class="footer-tagline">Bourdais &amp; Pernia · A deliberate way to eat.</p>
+        <a href="https://www.instagram.com/bourdaisandpernia/" target="_blank" rel="noopener" class="footer-ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          @bourdaisandpernia
+        </a>
+      </div>
+
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Bourdais &amp; Pernia. All rights reserved.</span>
+      <span>Made with intention.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
