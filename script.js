@@ -115,7 +115,7 @@
         return `${dd} ${months[mm - 1]} ${yy}`;
       };
       const lines = [
-        `Hi Luis, I'd like to book with Casa Pernia.`,
+        `Hi Luis, I'd like to book with Casa Pernía.`,
         `Name: ${v('name')}`,
         `Experience: ${v('type')}`,
         v('guests') && `Guests: ${v('guests')}`,
