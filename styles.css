@@ -124,6 +124,7 @@ section[id] { scroll-margin-top: 64px; } /* nav links land below the fixed bar *
   animation: introIn 1.4s var(--ease) 0.2s forwards;
 }
 .intro-amp { color: var(--brass-l); font-style: italic; }
+.intro-logo { display: block; width: clamp(220px, 42vw, 400px); height: auto; }
 .intro-line {
   width: 0;
   height: 1px;
@@ -177,7 +178,19 @@ section[id] { scroll-margin-top: 64px; } /* nav links land below the fixed bar *
   font-size: 1.45rem;
   font-weight: 400;
   letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
 }
+.nav-mark {
+  width: 34px;
+  height: 34px;
+  background: var(--brass-l);
+  -webkit-mask: url(images/brand/p-mask.svg) center / contain no-repeat;
+  mask: url(images/brand/p-mask.svg) center / contain no-repeat;
+  transition: background 0.5s var(--ease);
+}
+.nav.scrolled .nav-mark { background: var(--brass); }
 .nav-links { display: flex; align-items: center; gap: 2.4rem; }
 .nav-links a {
   font-size: 0.74rem;
@@ -446,7 +459,14 @@ body.is-ready .hero-ctas    { opacity: 1; transform: none; transition-delay: 0.5
 /* ── Footer ── */
 .footer { border-top: 1px solid var(--line); padding: 2.6rem 0; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
-.footer-logo { font-family: var(--serif); font-size: 1.4rem; }
+.footer-logo {
+  display: block;
+  width: 150px;
+  aspect-ratio: 1.70;
+  background: var(--ink);
+  -webkit-mask: url(images/brand/logo-mask.svg) center / contain no-repeat;
+  mask: url(images/brand/logo-mask.svg) center / contain no-repeat;
+}
 .footer-tag, .footer-copy { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--muted); }
 
 /* ══════════════════════════════════════
