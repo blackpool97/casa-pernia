@@ -125,6 +125,25 @@
     });
   });
 
+  /* ── PRESS EFFECT: gold ripple from the point pressed ── */
+  const pressables = document.querySelectorAll('.btn, .nav-cta, .exp-card, .work-item, .book-form button');
+  pressables.forEach((el) => {
+    el.classList.add('ripple-host');
+    el.addEventListener('pointerdown', (e) => {
+      if (reduced) return;
+      const r = el.getBoundingClientRect();
+      const dot = document.createElement('span');
+      dot.className = 'ripple';
+      dot.style.left = `${e.clientX - r.left}px`;
+      dot.style.top = `${e.clientY - r.top}px`;
+      // big enough to cover the whole element from any point
+      dot.style.setProperty('--rs', String(Math.ceil(Math.hypot(r.width, r.height) / 6) + 2));
+      el.appendChild(dot);
+      dot.addEventListener('animationend', () => dot.remove());
+      if (navigator.vibrate && e.pointerType === 'touch') { try { navigator.vibrate(6); } catch (err) {} }
+    });
+  });
+
   /* ── BOOKING FORM → WhatsApp ── */
   const form = document.getElementById('bookForm');
   if (form) {
