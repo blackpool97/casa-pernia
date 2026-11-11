@@ -681,3 +681,9 @@ a, button { -webkit-tap-highlight-color: transparent; }
 
 /* Experience card photos */
 .exp-img { border-bottom: 1px solid var(--line); }
+.interlude-stack { display: grid; gap: clamp(1.5rem, 4vw, 3rem); }
+.interlude-item--wide img { aspect-ratio: 3 / 2; }
+@media (max-width: 560px) {
+  .interlude-grid { grid-template-columns: minmax(0, 1fr); }
+  .interlude-item--low { margin-top: 0; }
+}
