@@ -669,3 +669,15 @@ a, button { -webkit-tap-highlight-color: transparent; }
 /* Photos: a fine gold hairline border */
 .work-item img { border: 1px solid rgba(176, 141, 87, 0.45); }
 .chef-photo { border: 1px solid rgba(176, 141, 87, 0.45); }
+
+/* ══════════════════════════════════════
+   INTERLUDE — kitchen to table, two offset photos
+══════════════════════════════════════ */
+.interlude { padding: 0 0 clamp(5rem, 10vw, 8rem); }
+.interlude-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.25rem, 4vw, 3rem); align-items: start; }
+.interlude-item--low { margin-top: clamp(3rem, 9vw, 8rem); }
+.interlude-item img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; border: 1px solid rgba(176, 141, 87, 0.45); }
+.interlude-item figcaption { margin-top: 1rem; font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--ink-soft); }
+
+/* Experience card photos */
+.exp-img { border-bottom: 1px solid var(--line); }
