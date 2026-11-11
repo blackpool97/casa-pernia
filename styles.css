@@ -687,3 +687,4 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .interlude-grid { grid-template-columns: minmax(0, 1fr); }
   .interlude-item--low { margin-top: 0; }
 }
+.interlude-item figcaption { max-width: 34ch; line-height: 1.35; }
