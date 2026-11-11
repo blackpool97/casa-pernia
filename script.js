@@ -108,6 +108,9 @@
         return;
       }
       const v = (k) => (form.elements[k].value || '').trim();
+      // Visitors who arrived through the IE QR code (casapernia.com/ie)
+      let fromIE = new URLSearchParams(location.search).get('src') === 'ie';
+      try { if (fromIE) sessionStorage.setItem('cp-src', 'ie'); else fromIE = sessionStorage.getItem('cp-src') === 'ie'; } catch (e) {}
       const niceDate = (iso) => {
         if (!iso) return '';
         const [yy, mm, dd] = iso.split('-').map(Number);
@@ -121,6 +124,7 @@
         v('guests') && `Guests: ${v('guests')}`,
         v('date') && `Date: ${niceDate(v('date'))}`,
         v('message') && `Notes: ${v('message')}`,
+        fromIE && `(Found you through the QR at IE)`,
       ].filter(Boolean);
       const url = 'https://wa.me/34695863004?text=' + encodeURIComponent(lines.join('\n'));
       // Backup: a visible button with the same link, in case the browser blocks the automatic jump
