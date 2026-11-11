@@ -330,7 +330,7 @@ body.is-ready .hero-ctas    { opacity: 1; transform: none; transition-delay: 0.5
 /* ══════════════════════════════════════
    EXPERIENCES + PROCESS (parchment band)
 ══════════════════════════════════════ */
-.section-light { background: var(--paper-2); }
+.section-light { background: var(--paper); }
 .exp-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 .exp-card {
   background: var(--card);
@@ -407,7 +407,7 @@ body.is-ready .hero-ctas    { opacity: 1; transform: none; transition-delay: 0.5
 /* ══════════════════════════════════════
    MENU — parchment card
 ══════════════════════════════════════ */
-.section-ivory { background: var(--paper-2); color: var(--ink); }
+.section-ivory { background: var(--paper); color: var(--ink); }
 .menu-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(3rem, 8vw, 8rem); align-items: start; }
 .menu-intro p { color: var(--muted); max-width: 440px; margin-top: 1.6rem; }
 .menu-intro .btn { margin-top: 2.2rem; }
@@ -456,7 +456,7 @@ body.is-ready .hero-ctas    { opacity: 1; transform: none; transition-delay: 0.5
 .form-note { font-size: 0.82rem; color: var(--muted); text-align: center; }
 
 /* ── Footer ── */
-.footer { border-top: 1px solid var(--line); padding: 2.6rem 0; }
+.footer { padding: 2.6rem 0; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .footer-logo {
   display: block;
@@ -592,4 +592,33 @@ body::after {
   body::after { animation: none; }
   .img-reveal img { clip-path: none; transform: none; }
   .section-head::after { transform: scaleX(1); }
+}
+
+/* ══════════════════════════════════════
+   SEPARATOR — gold rule with three diamonds (ends + centre), as in the posts
+══════════════════════════════════════ */
+.sep { padding: 0 var(--pad); }
+.sep-line {
+  position: relative; max-width: 1240px; height: 9px; margin: 0 auto;
+}
+.sep-line::before {
+  content: ''; position: absolute; left: 4px; right: 4px; top: 50%; height: 1px;
+  margin-top: -0.5px; background: var(--brass);
+  transform: scaleX(0); transform-origin: 50% 50%;
+  transition: transform 1.6s var(--ease);
+}
+.sep-line i {
+  position: absolute; top: 50%; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
+  background: var(--brass);
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.8s var(--ease);
+}
+.sep-line i:nth-child(1) { left: 3.5px; transition-delay: 1.1s; }
+.sep-line i:nth-child(2) { left: 50%; transition-delay: 0.2s; }
+.sep-line i:nth-child(3) { left: calc(100% - 3.5px); transition-delay: 1.1s; }
+.sep.visible .sep-line::before { transform: scaleX(1); }
+.sep.visible .sep-line i { transform: rotate(45deg) scale(1); }
+@media (prefers-reduced-motion: reduce) {
+  .sep-line::before { transform: none; }
+  .sep-line i { transform: rotate(45deg); }
 }

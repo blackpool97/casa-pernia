@@ -93,6 +93,7 @@
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); io2.unobserve(e.target); } });
   }, { threshold: 0.2 });
   document.querySelectorAll('.work-item.img-reveal').forEach((el) => io2.observe(el));
+  document.querySelectorAll('.sep').forEach((el) => io2.observe(el));
 
   // Scroll progress line + hero drift
   const bar = document.getElementById('progress');
