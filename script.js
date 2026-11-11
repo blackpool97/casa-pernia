@@ -126,7 +126,7 @@
   });
 
   /* ── PRESS EFFECT: gold ripple from the point pressed ── */
-  const pressables = document.querySelectorAll('.btn, .nav-cta, .exp-card, .work-item, .book-form button');
+  const pressables = document.querySelectorAll('.btn, .nav-cta, .exp-card, .book-form button');
   pressables.forEach((el) => {
     el.classList.add('ripple-host');
     el.addEventListener('pointerdown', (e) => {

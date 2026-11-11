@@ -660,3 +660,12 @@ a, button { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   .ripple { display: none; }
 }
+
+/* Photos: an elegant press — no ripple; the photo dims slightly, settles in and the gold border brightens */
+.work-item img { transition: clip-path 1.4s var(--ease), transform 2s var(--ease), filter 0.5s var(--ease), border-color 0.5s var(--ease); }
+.work-item:active { transform: scale(0.985); }
+.work-item:active img { filter: brightness(0.88); border-color: rgba(205, 177, 132, 0.9); transition-duration: 0.2s; }
+
+/* Photos: a fine gold hairline border */
+.work-item img { border: 1px solid rgba(176, 141, 87, 0.45); }
+.chef-photo { border: 1px solid rgba(176, 141, 87, 0.45); }
