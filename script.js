@@ -87,6 +87,43 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
+  /* ── EFFECTS ── */
+  // Photos (dish strip) reveal one by one as they come into view
+  const io2 = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); io2.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.work-item.img-reveal').forEach((el) => io2.observe(el));
+
+  // Scroll progress line + hero drift
+  const bar = document.getElementById('progress');
+  const heroContent = document.querySelector('.hero-content');
+  const heroScroll = document.querySelector('.hero-scroll');
+  let ticking = false;
+  const fx = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+    if (!reduced && heroContent && body.classList.contains('is-ready')) {
+      const h = window.innerHeight;
+      const k = Math.min(1, window.scrollY / (h * 0.8));
+      heroContent.style.transform = `translateY(${k * -60}px)`;
+      heroContent.style.opacity = String(1 - k * 0.9);
+      if (heroScroll) heroScroll.style.opacity = String(1 - k * 2);
+    }
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(fx); } }, { passive: true });
+  fx();
+
+  // Experience cards: gold light follows the cursor
+  document.querySelectorAll('.exp-card').forEach((card) => {
+    const bodyEl = card.querySelector('.exp-body');
+    card.addEventListener('pointermove', (e) => {
+      const r = bodyEl.getBoundingClientRect();
+      bodyEl.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      bodyEl.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+
   /* ── BOOKING FORM → WhatsApp ── */
   const form = document.getElementById('bookForm');
   if (form) {
