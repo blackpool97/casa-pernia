@@ -144,6 +144,18 @@
     });
   });
 
+  /* ── EXPERIENCE CARDS: tap a card, land on the booking form with that experience selected ── */
+  document.querySelectorAll('.exp-card').forEach((card) => {
+    const a = card.querySelector('.exp-link');
+    if (!a) return;
+    a.addEventListener('click', () => {
+      const sel = document.getElementById('f-type');
+      if (sel && a.dataset.exp) sel.value = a.dataset.exp;
+    });
+    // tapping anywhere on the card (photo, text, tag) follows the link
+    card.addEventListener('click', (e) => { if (!e.target.closest('a')) a.click(); });
+  });
+
   /* ── BOOKING FORM → WhatsApp ── */
   const form = document.getElementById('bookForm');
   if (form) {
