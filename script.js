@@ -180,6 +180,7 @@
         `Experience: ${v('type')}`,
         v('guests') && `Guests: ${v('guests')}`,
         v('date') && `Date: ${niceDate(v('date'))}`,
+        v('allergies') && `Allergies / dietary: ${v('allergies')}`,
         v('message') && `Notes: ${v('message')}`,
         fromIE && `(Found you through the QR at IE)`,
       ].filter(Boolean);

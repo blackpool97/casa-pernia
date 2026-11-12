@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261111" />
+  <link rel="stylesheet" href="styles.css?v=20261112" />
   <meta name="theme-color" content="#0d0b09" />
   <link rel="icon" type="image/svg+xml" href="images/brand/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/brand/favicon-32.png" />
@@ -21,6 +21,20 @@
   <meta property="og:url" content="https://casapernia.com/" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preload" as="image" href="images/table-golden-hour.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Casa Pernía",
+    "description": "Private chef dinners, celebrations and weekly meal prep, cooked in your home. Fine dining, Familiar setting.",
+    "url": "https://casapernia.com/",
+    "image": "https://casapernia.com/images/table-golden-hour.jpg",
+    "telephone": "+34695863004",
+    "areaServed": { "@type": "City", "name": "Madrid" },
+    "founder": { "@type": "Person", "name": "Luis Pernía" },
+    "sameAs": ["https://www.instagram.com/casaperniacooking_/"]
+  }
+  </script>
 </head>
 <body class="is-loading">
   <div class="progress" id="progress" aria-hidden="true"></div>
@@ -175,7 +189,7 @@
     <section class="section chef" id="chef">
       <div class="container chef-grid">
         <figure class="chef-photo reveal img-reveal">
-          <img src="images/chef-luis.jpg" alt="Luis Pernía slicing mushrooms in a home kitchen, wearing a Chef Luis Pernía apron" />
+          <img src="images/chef-luis.jpg" alt="Luis Pernía slicing mushrooms in a home kitchen, wearing a Chef Luis Pernía apron" loading="lazy" decoding="async" />
         </figure>
         <div class="chef-text reveal delay-1">
           <p class="eyebrow">The Chef</p>
@@ -281,8 +295,12 @@
             <input id="f-date" name="date" type="date" />
           </div>
           <div class="field">
+            <label for="f-allergy">Allergies or dietary needs</label>
+            <input id="f-allergy" name="allergies" type="text" placeholder="None, or tell me (nuts, gluten, vegetarian…)" autocomplete="off" />
+          </div>
+          <div class="field">
             <label for="f-msg">Anything I should know?</label>
-            <textarea id="f-msg" name="message" rows="4" placeholder="Occasion, allergies, dishes you love…"></textarea>
+            <textarea id="f-msg" name="message" rows="4" placeholder="Occasion, dishes you love…"></textarea>
           </div>
           <button type="submit" class="btn btn-dark btn-full">Send on WhatsApp</button>
           <a id="waLink" class="btn btn-wa btn-full" href="https://wa.me/34695863004" target="_blank" rel="noopener" hidden>Open WhatsApp</a>
@@ -303,6 +321,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261111"></script>
+  <script src="script.js?v=20261112"></script>
 </body>
 </html>
